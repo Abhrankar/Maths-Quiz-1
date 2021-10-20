@@ -1,1 +1,1 @@
-# Maths-Quiz-1
+# Maths-Quiz
