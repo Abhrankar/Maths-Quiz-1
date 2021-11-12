@@ -1,9 +1,11 @@
+player1_name = localStorage.getItem("player1_name");
+player2_name = localStorage.getItem("player2_name");
 
-	player1_name = localStorage.getItem("player1_name");
-	player2_name = localStorage.getItem("player2_name");
+player1_score = 0;
+player2_score = 0;
 
-	player1_score = 0;
-	player2_score = 0;
+question_turn = "player1";
+answer_turn = "player2";
 
 document.getElementById("player1_name").innerHTML = player1_name + " : ";
 document.getElementById("player2_name").innerHTML = player2_name + " : ";
@@ -19,7 +21,6 @@ function send() {
 	number2 = document.getElementById("number2").value;
 	actual_answer = parseInt(number1) * parseInt(number2);
 	console.log(actual_answer);
-
 
     question_number = "<h4>" + number1 + " X "+ number2 +"</h4>";
     input_box = "<br>Answer : <input type='text' id='input_check_box'>";
@@ -67,8 +68,8 @@ function check()
 		answer_turn = "player2"
 		document.getElementById("player_answer").innerHTML = "Answer Turn - " + player2_name ;
 	}
-	else 
-	{
+
+	else {
 		answer_turn = "player1"
 		document.getElementById("player_answer").innerHTML = "Answer Turn - " + player1_name ;
 	}
